@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFD1DC; /* Background color */
+    background-image: url('stars-galaxy.gif'); /* Animated background image */
+    background-repeat: repeat; /* Repeat the background image */
+    background-size: auto; /* Set the size of the background image to its original size */
+    animation: backgroundAnimation 30s infinite alternate linear;
+}
+
+@keyframes backgroundAnimation {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+.container {
+    text-align: center;
+}
+
+#flowerContainer {
+    position: absolute; /* Position the flowerContainer absolutely within the container */
+    top: 80px; /* Adjust the top position as needed */
+    left: 50%; /* Position the flowerContainer in the center horizontally */
+    transform: translateX(-50%); /* Center the flowerContainer horizontally */
+    z-index: 1; /* Ensure the flower container is above other elements */
+}
+
+h2 {
+    margin: 0; /* Remove default margin */
+     /* Add background to make text more visible */
+     background-color: rgba(255, 255, 255, 0.7); /* White background with opacity */
+     padding: 10px 20px; /* Adjust padding as needed */
+     border-radius: 10px; /* Round the corners */
+}
+
+h1 {
+    margin-top: 50px; /* Adjust the top margin to create space between the flower and the heading */
+     /* Add background to make text more visible */
+     background-color: rgba(255, 255, 255, 0.7); /* White background with opacity */
+     padding: 10px 20px; /* Adjust padding as needed */
+     border-radius: 10px; /* Round the corners */
+}
+
+/* CSS for the embedded font */
+/* Replace <uniquifier> with a unique and descriptive class name */
+/* Replace <weight> with a value from 400 to 700 */
+
+/* Example CSS rule for using the font */
+.dancing-script {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400; /* You can choose the desired font weight */
+    font-style: normal;
+}
+
+/* Apply the font to specific elements */
+body {
+    font-family: "Dancing Script", cursive; /* Apply the font to the entire body */
+}
+
+h1, h2 {
+    font-family: "Dancing Script", cursive; /* Apply the font to headings */
+}
