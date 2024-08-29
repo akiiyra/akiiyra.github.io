@@ -1,49 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apology to Sofie</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f8ff;
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-        }
-
-        .container {
-            text-align: center;
-        }
-
-        .text {
-            font-size: 2em;
-            color: #333;
-            opacity: 0;
-            animation: fadeInOut 4s infinite;
-        }
-
-        @keyframes fadeInOut {
-            0%, 100% { opacity: 0; }
-            50% { opacity: 1; }
-        }
-
-        .text:nth-child(1) {
-            animation-delay: 0s;
-        }
-
-        .text:nth-child(2) {
-            animation-delay: 2s;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="text">I'm sorry.</div>
-        <div class="text">I love you, Sofie.</div>
-    </div>
-</body>
+    <head>
+        <title>do u love me?</title>
+        <link rel="stylesheet" href="./styles.css">
+        
+    </head> 
+    <body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">do u love me sofie?</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media.tenor.com/Vus7KCWmJdcAAAAi/please-peach.gif" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
 </html>
